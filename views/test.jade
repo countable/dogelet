@@ -1,0 +1,9 @@
+extends layout
+
+block content
+
+  p Welcome to Doge
+  ul
+    for verb in verbs
+      li
+        a(href='/'+verb) #{verb}

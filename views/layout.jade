@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    //link(href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,700,900", rel="stylesheet")
+    link(rel='stylesheet', href='/stylesheets/normalize.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel="stylesheet")
+  body
+
+    if req.session.email
+      nav
+        ul
+          li
+            a(href='/history', title='history')
+              i.fa.fa-clock-o
+          li
+            a(href='/logout', title='log out')
+              i.fa.fa-lock
+
+    .content
+      block content

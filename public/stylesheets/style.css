@@ -1,0 +1,226 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 20px;
+}
+body {
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding-right: 70px;
+}
+a {
+  color: #ba9f33;
+}
+section {
+  padding: 80px 0;
+}
+h1 {
+  color: #ba9f33;
+}
+h2 {
+  font-size: 24px;
+  color: #ba9f33;
+}
+ul li {
+  list-style: none;
+}
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 50px;
+}
+input[type="text"],
+input[type="email"],
+button {
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  height: 50px;
+}
+input[type="text"],
+input[type="email"] {
+  border: 1px solid #000;
+  padding: 15px;
+}
+button {
+  border-width: 0;
+  padding: 15px 60px;
+  margin: 0 10px;
+  background-color: #ba9f33;
+  color: #fff;
+  border-bottom: 5px solid #7a6a2a;
+}
+button:hover {
+  opacity: 0.8;
+}
+label {
+  padding: 15px;
+}
+nav {
+  position: fixed;
+  width: 80px;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  text-align: center;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  display: block;
+  list-style: none;
+  padding: 15px;
+  font-size: 50px;
+  line-height: 50px;
+  width: 80px;
+  height: 80px;
+}
+nav ul li:hover {
+  -webkit-transition: 0.5s background-color;
+  background-color: #ba9f33;
+}
+nav ul li:hover a {
+  -webkit-transition: 0.5s color;
+  color: #fff;
+}
+.balance {
+  padding: 40px 0 0 0;
+}
+.balance .label {
+  margin-bottom: 20px;
+}
+.balance .balance-num {
+  font-size: 150px;
+  line-height: 140px;
+}
+.receive {
+  background-color: #d0c0a8;
+}
+.signup input[type='email'] {
+  font-size: 30px;
+  padding: 20px;
+  height: 70px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+.grow {
+  display: inline-block;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+}
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+.pulse {
+  opacity: 0.7;
+  -webkit-transition: 0.5s opacity;
+  display: inline-block;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0,0,0,0);
+}
+.pulse:hover {
+  opacity: 1;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@-moz-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@-webkit-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@-o-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@-ms-keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@keyframes pulse {
+  25% {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  75% {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}

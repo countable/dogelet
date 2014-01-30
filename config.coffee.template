@@ -1,0 +1,16 @@
+
+module.exports = (app)->
+  
+  app.set 'dogecoin_username', '<yours here>'
+  app.set 'dogecoin_password', '<yours here>'
+
+  app.set 'host', '<your hostname (like google.ca) including port number if not 80, but not the protocol>'
+  
+  app.set 'email_username', '<sendgrid username>' # configured for sendgrid currently
+  app.set 'email_password', '<sendgrid password>' # configured for sendgrid currently
+  
+  # A salt value to use for HMACs.
+  app.set 'salt', "This should be a long, truly random string."
+  # A secret value to use to encrypt sessions.
+  app.set 'secret', 'This should be a random string of reasonable length'
+

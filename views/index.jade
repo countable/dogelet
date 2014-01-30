@@ -1,0 +1,61 @@
+extends layout
+
+block content
+
+  if req.session.email
+
+    h1 DogeLet - #{req.session.email}
+    section.balance
+
+      .label
+        label  your wallet 
+        input(type='text', size=40, value=address, onclick="this.select();", onchange="this.value='#{address}';")
+        label  has
+      .balance-num #{balance} Ɖ
+
+    section.send
+
+      form(action='/send')
+        label(for='amount') Send Ɖ 
+        input(type='text', name='amount', size=6, placeholder='amount')
+        label  to 
+        input(type='text', name='send_to', size=40, placeholder='to address')
+        input(type='hidden', name='email', value=req.session.email)
+        button.send.grow(type='submit') Send
+
+  else
+
+    h1 
+      | This is DogeLet (alpha*).
+
+    h2 This is a test for a proof of concept wallet for Dogecoin, the friendly internet currency.
+
+    .signup
+      form(action='/signup')
+        p
+          | To get started, enter your email address and click the Dogecoin below:
+        input(type='email', required=true, name='email', placeholder='email')
+        br
+        input.pulse(src='/images/dogecoin.png', type='image')
+
+    
+    p(style='opacity:0.5')
+      | Your email address will be kept private, and DogeLet won't send you email unless you ask.
+    
+    p(style='opacity:0.5')
+      | Already signed up? Check your email, you can sign in from there.
+
+    p(style='opacity:0.5') * This is alpha software, don't deposit large amounts of Doge!
+
+    //
+      br
+      ul
+        li
+          a(href="http://dogecoin.com") The official Dogecoin site
+        li
+          a(href='http://reddit.com/r/dogecoin') The Dogecoin Reddit community
+        li
+          a(href="https://github.com/ummjackson/dogecoin-resources") A list of resources
+      | My mission is to make it easier and safer to start using DogeCoin. This site is designed to be ridiculously simple to use, and very secure in its simplicity. 
+      | By making just a dead simple wallet, there are way fewer options for hackers to try to hack, and it's less intimidating for new users.
+  
