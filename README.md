@@ -1,9 +1,11 @@
 dogelet
 =======
 
-Dead Simple Dogeoin Wallet in Node.JS with coffeescript. Clone it and install deps with npm.
+Dead Simple Dogeoin Wallet in Node.JS with coffeescript.
 
-You'll have to install dogecoind first.
+These instructions were typed in a hurry and aren't great yet.
+
+You'll have to install dogecoind first. Then clone this wallet and install deps with npm. Then create a local config file. It is in the .gitignore if you do this, so your sensitive info isn't shared:
 
 ```
 
