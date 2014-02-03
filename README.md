@@ -1,7 +1,7 @@
 dogelet
 =======
 
-Dead Simple Dogeoin Wallet in Node.JS with coffeescript.
+Dead simple Dogecoin wallet app in Node.JS with coffeescript. It was built as a test of the module [node-dogecoin](https://github.com/countable/node-dogecoin) , which it uses to connect to dogecoind via json-rpc.
 
 You'll have to install [dogecoind](https://github.com/dogecoin/dogecoin) first.
 
