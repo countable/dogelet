@@ -13,7 +13,7 @@ RedisStore = require('connect-redis')(connect)
 app = express()
 
 # import configuration options
-require('config')(app)
+require('./config')(app)
 
 dogecoin = (require 'node-dogecoin')()
 dogecoin.auth(app.get('dogecoin_username'),app.get('dogecoin_password')).set('host', 'localhost').set({port:22555})
@@ -65,7 +65,7 @@ get_email_hash = (email, callback)->
   unless EMAIL_REGEX.test email
     throw 'Invalid Email'
   
-  hash = crypto.createHmac('sha1', SALT).update(email).digest('hex');
+  hash = crypto.createHmac('sha224', SALT).update(email).digest('hex');
 
 
 

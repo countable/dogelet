@@ -21,7 +21,7 @@ Module dependencies.
 
   app = express();
 
-  require('config')(app);
+  require('./config')(app);
 
   dogecoin = (require('node-dogecoin'))();
 
@@ -85,7 +85,7 @@ Module dependencies.
     if (!EMAIL_REGEX.test(email)) {
       throw 'Invalid Email';
     }
-    return hash = crypto.createHmac('sha1', SALT).update(email).digest('hex');
+    return hash = crypto.createHmac('sha224', SALT).update(email).digest('hex');
   };
 
   security_error = function(res, msg) {

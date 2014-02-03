@@ -3,9 +3,19 @@ dogelet
 
 Dead Simple Dogeoin Wallet in Node.JS with coffeescript.
 
-These instructions were typed in a hurry and aren't great yet.
+You'll have to install [dogecoind](https://github.com/dogecoin/dogecoin) first.
 
-You'll have to install dogecoind first. Then clone this wallet and install deps with npm. Then create a local config file. It is in the .gitignore if you do this, so your sensitive info isn't shared:
+Then clone this wallet and install deps with npm.
+
+```
+
+git clone https://github.com/countable/dogelet.git
+cd dogelet
+npm install .
+
+```
+
+Then create a local config file. It is in the .gitignore if you do this, so your sensitive info isn't shared:
 
 ```
 
@@ -21,5 +31,15 @@ coffee -c config.coffee
 
 ```
 
-This wallet currently uses sendgrid and redis for email and sessions, respectively, but it's easy to change this.
+Then run the web app.
+
+```
+
+node app.js
+
+```
+
+And, you should be able to browse to the wallet on localhost:3000
+
+This wallet currently uses sendgrid for email, and redis for storing sessions, but it's easy to change this.
 
