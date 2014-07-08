@@ -8,7 +8,6 @@ path = require("path")
 
 crypto = require 'crypto'
 connect = require('connect')
-RedisStore = require('connect-redis')(connect)
 
 app = express()
 
@@ -34,7 +33,9 @@ app.set "view engine", "jade"
 SALT = app.get('salt')
 
 app.use(express.cookieParser())
-app.use(connect.session({ store: new RedisStore({port:6379,host:'localhost'}), secret: app.get('secret') }))
+app.use(connect.session({ secret: app.get('secret') }))
+#RedisStore = require('connect-redis')(connect)
+#app.use(connect.session({ store: new RedisStore({port:6379,host:'localhost'}), secret: app.get('secret') }))
 
 app.use express.favicon()
 app.use express.logger("dev")
